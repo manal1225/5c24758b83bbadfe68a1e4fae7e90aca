@@ -75,19 +75,23 @@ class Game{
                  
 
                 if (keyIsDown(RIGHT_ARROW) && player.index !== null) {
-                    player.distance.x -= 10
+                    player.distance -= 10
+                    players[index -1].y= 0;
                     player.update();
                 }
                 if (keyIsDown(LEFT_ARROW) && player.index !== null) {
-                    player.distance.x += 10
+                    player.distance += 10
+                     players[index -1].y= 0;
                     player.update();
                 }
             if (keyIsDown(UP_ARROW) && player.index !== null) {
-                    player.distance.y -= 10
+                    player.distance -= 10
+                 players[index -1].x= 0;
                     player.update();
                 }
         if (keyIsDown(DOWN_ARROW) && player.index !== null) {
-                    player.distance.y += 10
+                    player.distance += 10
+             players[index -1].x= 0;
                     player.update();
                 }
                  if (frameCount % 20 === 0) {
